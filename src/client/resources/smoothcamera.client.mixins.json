@@ -1,0 +1,15 @@
+{
+	"required": true,
+	"package": "me.smoothcamera.client.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+		"MixinCamera",
+		"MixinLocalPlayer"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}
