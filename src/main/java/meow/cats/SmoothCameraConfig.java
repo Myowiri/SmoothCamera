@@ -16,7 +16,7 @@ public class SmoothCameraConfig {
     public boolean enabled = true;
     public boolean smoothTeleport = true;
     public float smoothness = 0.5f;
-    public float smoothnessf5 = 0.015f;
+    public float smoothnessf5 = 0.01f;
 
     public static SmoothCameraConfig INSTANCE = new SmoothCameraConfig();
 

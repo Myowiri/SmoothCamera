@@ -21,9 +21,9 @@ public class Slider {
     public Slider(String name, float value, float min, float max,
                   Consumer<Float> onChange) {
         this.name = name;
-        this.value = clamp(value);
         this.min = min;
         this.max = max;
+        this.value = clamp(value);
         this.onChange = onChange;
     }
 
@@ -51,7 +51,13 @@ public class Slider {
         int barX = x + 6;
         int barY = y + height - 5;
         int barWidth = width - 12;
-        float progress = (value - min) / (max - min);
+        float range = max - min;
+        float progress = range == 0.0f
+                ? 0.0f
+                : (value - min) / range;
+
+        progress = Math.max(0.0f, Math.min(1.0f, progress));
+
         int filledWidth = Math.round(barWidth * progress);
 
         context.fill(barX, barY, barX + barWidth, barY + 2, 0xFF555555);

@@ -72,9 +72,11 @@ public class ConfigScreen extends Screen {
         for (Slider slider : sliders) {
             slider.mouseReleased();
         }
+
+        SmoothCameraConfig.save();
+
         return super.mouseReleased(click);
     }
-
 
     public void addButtons(){
 
@@ -83,9 +85,9 @@ public class ConfigScreen extends Screen {
 
         buttons.add(new Button(SmoothCameraConfig.INSTANCE.smoothTeleport, "Smooth Teleport", value -> SmoothCameraConfig.INSTANCE.smoothTeleport = value));
 
-        sliders.add(new Slider("Smoothness", SmoothCameraConfig.INSTANCE.smoothness, 0.01f, 0.5f, value -> {SmoothCameraConfig.INSTANCE.smoothness = value;}));
+        sliders.add(new Slider("Smoothness", SmoothCameraConfig.INSTANCE.smoothness, 0.001f, 0.5f, value -> {SmoothCameraConfig.INSTANCE.smoothness = value;SmoothCameraConfig.save();}));
 
-        sliders.add(new Slider("F5 Smoothness", SmoothCameraConfig.INSTANCE.smoothnessf5, 0.01f, 0.1f, value -> {SmoothCameraConfig.INSTANCE.smoothnessf5 = value;}));
+        sliders.add(new Slider("F5 Smoothness", SmoothCameraConfig.INSTANCE.smoothnessf5, 0.001f, 0.1f, value -> {SmoothCameraConfig.INSTANCE.smoothnessf5 = value;SmoothCameraConfig.save();}));
 
     }
 
