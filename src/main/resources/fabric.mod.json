@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "smoothcamera",
+	"version": "${version}",
+	"name": "SmoothCamera",
+	"description": "SmoothCamera adds cinematic, smooth camera movement to Minecraft. It softens sudden motion, smooths perspective transitions, and enhances overall visual feel. Client-side only",
+	"authors": [
+		"Myowiri"
+	],
+	"icon": "assets/smoothcamera/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"client": [
+			"meow.cats.SmoothCameraClient"
+		],
+		"modmenu": [
+			"meow.cats.gui.ModMenu"
+		]
+
+	},
+	"mixins": [
+		"smoothcamera-mod.mixins.json"
+	],
+
+	"depends": {
+		"fabricloader": ">=0.18.0",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
