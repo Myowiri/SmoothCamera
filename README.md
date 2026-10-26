@@ -83,8 +83,9 @@ SmoothCamera adds cinematic, smooth camera movement to Minecraft. It softens sud
 >
 > ```
 > {
->   "enabled": true,
->   "smoothness": 0.1,
->   "smoothnessf5": 0.006
+>  "enabled": true,
+>  "SmoothTeleport": true,
+>  "TPSmoothness": 0.5,
+>  "F5Smoothness": 0.015
 > }
 > ```
