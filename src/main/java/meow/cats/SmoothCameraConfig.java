@@ -14,9 +14,9 @@ public class SmoothCameraConfig {
             FabricLoader.getInstance().getConfigDir().resolve("smoothcamera.json");
 
     public boolean enabled = true;
-    public boolean smoothTeleport = true;
-    public float smoothness = 0.5f;
-    public float smoothnessf5 = 0.01f;
+    public boolean SmoothTeleport = true;
+    public float TPSmoothness = 0.5f;
+    public float F5Smoothness = 0.01f;
 
     public static SmoothCameraConfig INSTANCE = new SmoothCameraConfig();
 
@@ -53,8 +53,8 @@ public class SmoothCameraConfig {
     }
 
     private void validate() {
-        smoothness = clamp(smoothness, 0.01f, 0.5f);
-        smoothnessf5 = clamp(smoothnessf5, 0.01f, 0.1f);
+        TPSmoothness = clamp(TPSmoothness, 0.01f, 0.5f);
+        F5Smoothness = clamp(F5Smoothness, 0.01f, 0.1f);
     }
 
     private static float clamp(float value, float min, float max) {

@@ -32,7 +32,7 @@ public class MixinLevelRenderer {
 			GraphicsResourceAllocator resourceAllocator, boolean renderOutline, CameraRenderState cameraState, GpuBufferSlice terrainFog, Vector4f fogColor, boolean shouldRenderSky, boolean consistentDepthRequired, CallbackInfo ci, @Local(name="featureFrame") FeatureRenderDispatcher.PreparedFrame featureFrame
 	){
 		SmoothCameraController.begin(featureFrame);
-		if (!SmoothCameraConfig.INSTANCE.smoothTeleport) return;
+		if (!SmoothCameraConfig.INSTANCE.SmoothTeleport) return;
 		try{
 			LocalPlayer player = Minecraft.getInstance().player;
 			if (player != null) {

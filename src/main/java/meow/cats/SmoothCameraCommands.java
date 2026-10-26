@@ -14,7 +14,7 @@ public class SmoothCameraCommands {
     public static void register() {
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> {
 
-            dispatcher.register(literal("smoothcamera")
+            dispatcher.register(literal("SmoothCamera")
 
                 .then(literal("toggle")
                     .executes(ctx -> {
@@ -28,10 +28,10 @@ public class SmoothCameraCommands {
 
                     .then(literal("SmoothTeleport")
                             .executes(ctx -> {
-                                SmoothCameraConfig.INSTANCE.smoothTeleport = !SmoothCameraConfig.INSTANCE.smoothTeleport;
+                                SmoothCameraConfig.INSTANCE.SmoothTeleport = !SmoothCameraConfig.INSTANCE.SmoothTeleport;
                                 SmoothCameraConfig.save();
 
-                                send("Enabled: " + SmoothCameraConfig.INSTANCE.smoothTeleport);
+                                send("Enabled: " + SmoothCameraConfig.INSTANCE.SmoothTeleport);
                                 return 1;
                             })
                     )
@@ -40,7 +40,7 @@ public class SmoothCameraCommands {
                             .then(argument("value", FloatArgumentType.floatArg(0.001f, 0.5f))
                                     .executes(ctx -> {
                                         float value = FloatArgumentType.getFloat(ctx, "value");
-                                        SmoothCameraConfig.INSTANCE.smoothness = value;
+                                        SmoothCameraConfig.INSTANCE.TPSmoothness = value;
                                         SmoothCameraConfig.save();
                                         send("TP Smoothness: " + value);
                                         return 1;
@@ -52,7 +52,7 @@ public class SmoothCameraCommands {
                             .then(argument("value", FloatArgumentType.floatArg(0.001f, 0.1f))
                                     .executes(ctx -> {
                                         float value = FloatArgumentType.getFloat(ctx, "value");
-                                        SmoothCameraConfig.INSTANCE.smoothnessf5 = value;
+                                        SmoothCameraConfig.INSTANCE.F5Smoothness = value;
                                         SmoothCameraConfig.save();
                                         send("F5 Smoothness: " + value);
                                         return 1;

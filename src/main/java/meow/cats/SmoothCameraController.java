@@ -32,7 +32,7 @@ public class SmoothCameraController {
         }
 
         Vec3 currentOffset = offset;
-        double factor = Math.pow(1.0 - SmoothCameraConfig.INSTANCE.smoothness, partialTicks);
+        double factor = Math.pow(1.0 - SmoothCameraConfig.INSTANCE.TPSmoothness, partialTicks);
         offset = offset.scale(factor);
 
         if (offset.lengthSqr() < 0.0001) {
@@ -44,7 +44,7 @@ public class SmoothCameraController {
 
     public float getSmoothF5Dist(float tickDelta, boolean isFirstPerson) {
         float target = isFirstPerson ? 0.0f : 4.0f;
-        currentF5Dist += (target - currentF5Dist) * (SmoothCameraConfig.INSTANCE.smoothnessf5 * tickDelta * 10f);
+        currentF5Dist += (target - currentF5Dist) * (SmoothCameraConfig.INSTANCE.F5Smoothness * tickDelta * 10f);
 
         if (Math.abs(currentF5Dist - target) < 0.001f) {
             currentF5Dist = target;

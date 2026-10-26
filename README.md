@@ -32,20 +32,20 @@ SmoothCamera adds cinematic, smooth camera movement to Minecraft. It softens sud
 > /smoothcamera toggle
 > ```
 >
-> **🎯 Smoothness (camera)**
+> **🎯 TPSmoothness (camera)**
 >
 > Controls how smooth the camera movement is:
 >
 >
 > ```
-> /smoothcamera smoothness <value>
+> /smoothcamera TPSmoothness <value>
 > ```
 >
 > Range: 0.001 – 0.5
 > Default: 0.5
 > Lower = faster, higher = smoother
 >
-> **🎥 F5 Smoothness (third-person)**
+> **🎥 F5 TPSmoothness (third-person)**
 >
 > Controls smooth transition in third-person view:
 >
@@ -75,7 +75,7 @@ SmoothCamera adds cinematic, smooth camera movement to Minecraft. It softens sud
 > ```
 > {
 >   "enabled": true,
->   "smoothness": 0.1,
->   "smoothnessf5": 0.006
+>   "TPSmoothness": 0.1,
+>   "F5Smoothness": 0.006
 > }
 > ```
