@@ -85,7 +85,7 @@ public class ConfigScreen extends Screen {
 
         buttons.add(new Button(SmoothCameraConfig.INSTANCE.smoothTeleport, "Smooth Teleport", value -> SmoothCameraConfig.INSTANCE.smoothTeleport = value));
 
-        sliders.add(new Slider("Smoothness", SmoothCameraConfig.INSTANCE.smoothness, 0.001f, 0.5f, value -> {SmoothCameraConfig.INSTANCE.smoothness = value;SmoothCameraConfig.save();}));
+        sliders.add(new Slider("TP Smoothness", SmoothCameraConfig.INSTANCE.smoothness, 0.001f, 0.5f, value -> {SmoothCameraConfig.INSTANCE.smoothness = value;SmoothCameraConfig.save();}));
 
         sliders.add(new Slider("F5 Smoothness", SmoothCameraConfig.INSTANCE.smoothnessf5, 0.001f, 0.1f, value -> {SmoothCameraConfig.INSTANCE.smoothnessf5 = value;SmoothCameraConfig.save();}));
 

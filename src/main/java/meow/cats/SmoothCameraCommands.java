@@ -26,7 +26,7 @@ public class SmoothCameraCommands {
                     })
                 )
 
-                    .then(literal("smoothteleport")
+                    .then(literal("SmoothTeleport")
                             .executes(ctx -> {
                                 SmoothCameraConfig.INSTANCE.smoothTeleport = !SmoothCameraConfig.INSTANCE.smoothTeleport;
                                 SmoothCameraConfig.save();
@@ -36,19 +36,19 @@ public class SmoothCameraCommands {
                             })
                     )
 
-                    .then(literal("smoothness")
+                    .then(literal("TPSmoothness")
                             .then(argument("value", FloatArgumentType.floatArg(0.001f, 0.5f))
                                     .executes(ctx -> {
                                         float value = FloatArgumentType.getFloat(ctx, "value");
                                         SmoothCameraConfig.INSTANCE.smoothness = value;
                                         SmoothCameraConfig.save();
-                                        send("Smoothness: " + value);
+                                        send("TP Smoothness: " + value);
                                         return 1;
                                     })
                             )
                     )
 
-                    .then(literal("f5")
+                    .then(literal("F5Smoothness")
                             .then(argument("value", FloatArgumentType.floatArg(0.001f, 0.1f))
                                     .executes(ctx -> {
                                         float value = FloatArgumentType.getFloat(ctx, "value");
