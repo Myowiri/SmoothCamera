@@ -1,6 +1,11 @@
 # **Smooth Camera**
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/DDDIOx-Jm8g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<a href="https://www.youtube.com/watch?v=DDDIOx-Jm8g">
+  <img src="https://img.youtube.com/vi/DDDIOx-Jm8g/0.jpg" alt="Smooth camera" width="100%">
+</a>
+
+
+
 
 SmoothCamera adds cinematic, smooth camera movement to Minecraft. It softens sudden motion, smooths perspective transitions, and enhances overall visual feel. Client-side.
 
